@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans&display=swap');
+
+
+:root {
+    --primary-900: #834100;
+    --primary-700:  #c0701f;
+    --primary-500: #df9449;
+    --primary-300: #fdc892;
+    
+    --secondary-300: #ffffff;
+
+    --dark-900: #242424;
+    --dark-700: #666565;
+
+    --image-bg: #ffad60;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    background-color: var(--dark-900);
+    color: var(--secondary-300);
+}
+nav{
+    background-color: var(--primary-700);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+.nav-container{
+    max-width: 1280px;
+    width: 90vw;
+    margin: auto;
+    
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    @media screen and (width <= 520px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.nav-link > a{
+    text-decoration: none;
+    color: var(--secondary-300);
+}
+.nav-link{
+    -webkit-transition: border 0.25s ease-in-out;
+    -moz-transition: border 0.25s ease-in-out;
+    -o-transition: border 0.25s ease-in-out;
+    border-bottom: 1px solid transparent;
+    transition: border 0.25s ease-in-out;
+    padding-bottom: 3px;
+}
+
+.nav-link:hover{
+    border-bottom: 1px solid var(--secondary-300);
+}
+.wrapper{
+    max-width: 1280px;
+    width: 90vw;
+    margin-inline: auto;
+    scroll-behavior: smooth;
+}
+
+section{
+    margin: 5rem 0;
+}
+
+.hero{
+    block-size: 100vh;
+    display: flex;
+    align-items: center;
+    @media screen and (width <= 720px) {
+        justify-content: center;
+    }
+}
+.hero-sub{
+    font-size: 2.5rem;
+    color: var(--dark-700);
+    font-weight: 900;
+}
+.dot{
+    color: var(--primary-500);
+}
+.hero-heading{
+    line-height: 1.1;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: clamp(3.125rem, 2.2917rem + 4.1667vw, 5.625rem);
+    color: var(--secondary-300);
+    font-weight: 900;
+}
+.colored-text{
+    color: var(--primary-500);
+}
+
+
+.heading{
+    font-size: 2.5rem;
+    color: var(--primary-500);
+    text-align: center;
+    margin:  3rem 0;
+}
+
+.about-section{
+    height: 150vh;
+    display: grid;
+    place-items: center;
+    @media screen and (width <= 720px) {
+       margin-bottom: 35rem;
+    }
+}
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 50px;
+    text-align: center;
+    @media screen and (width <= 720px) {
+        display: block
+    }
+}
+
+img{
+    background-color: var(--image-bg);
+    border-radius: 15rem 30rem 14rem 13rem / 22rem 19rem 25rem 17rem;
+    width: 100%;
+    animation: jelly 1.5s infinite alternate;
+}
+@keyframes jelly {
+    0% {
+        border-radius: 15rem 30rem 14rem 13rem / 22rem 19rem 25rem 17rem;
+    }
+    100% {
+        border-radius: 20rem 18rem 25rem 15rem / 20rem 25rem 15rem 15rem;
+    }
+}
+
+.coder{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-300);
+    margin-bottom: 1.5rem;
+    @media screen and (width <= 720px) {
+        margin-top: 5rem ;
+        margin-bottom: 3rem;
+    }
+}
+
+.about-coder{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--secondary-300);
+    line-height: 1.5;
+    @media screen and (width <= 520px) {
+        margin-bottom: 3rem;
+    }
+}
+
+.personal-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 0;
+    margin: 2rem 0;
+    background-color: var(--dark-700);
+    padding: 20px;
+    border-radius: 10px;
+    @media screen and (width <= 520px) {
+        display: block;
+    }
+}
+
+.detail{
+    @media screen and (width <= 520px) {
+        margin-bottom: 1rem;
+    }
+}
+
+.detail-heading{
+    font-size: 1rem;
+    color: var(--primary-500);
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.detail-value{
+    white-space: nowrap;
+    font-size: 1rem;
+    color: var(--secondary-300);
+    font-weight: 500;
+}
+.phone{
+    text-decoration: none;
+    color: var(--secondary-300);
+}
+
+
+.skills-section{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.skills-heading{
+    margin: 0rem 0;
+}
+.skill-set{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px 100px; 
+@media screen and (width <= 720px) {
+    grid-template-columns: 100%;
+}
+}
+
+.single-skill{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-inline: auto;
+}
+
+.skill-title{
+    width: 100%;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--secondary-300);
+}
+
+progress {
+    width: 100%;
+    height : 10px;
+    border: 1px solid var(--dark-700);
+    border-radius: 20px;
+}
+progress::-webkit-progress-bar {
+    background-color: var(--dark-700);
+}
+progress::-webkit-progress-value {
+    background-color: var(--primary-700);
+    transition: width 0.3s ease-in-out;
+}
+
+.progress{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.progress-value{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.experience-section{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.experience-section>div>p{
+    max-width: 800px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+footer{
+    background-color: var(--primary-700);
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+footer>.footer-container{
+    max-width: 1280px;
+    width: 90vw;
+    margin-inline: auto;
+}
+
+.footer-heading{
+    color: var(--secondary-300);
+    margin-top: 2rem;
+}
+
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+    list-style: none;
+    @media screen and (width <= 520px) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.link{
+    border-bottom: 1px solid transparent;
+    -webkit-transition: border 0.25s ease-in-out;
+    -moz-transition: border 0.25s ease-in-out;
+    -o-transition: border 0.25s ease-in-out;
+    transition: border 0.25s ease-in-out;
+    padding-bottom: 3px;
+}
+
+.link:hover{
+    border-bottom: 1px solid var(--secondary-300);
+    @media screen and (width <= 520px) {
+        margin-bottom: 20px;
+    }
+}
+
+.link>a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--secondary-300);
+    @media screen and (width <= 520px) {
+        margin-bottom: 20px;
+    }
+    
+}
